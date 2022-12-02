@@ -1,4 +1,4 @@
-# Welcome to *HGCDB Tutorials*, a one-stop-shop for all things HGCADB
+# Welcome to *HGCALDB Tutorials*, a one-stop-shop for all things HGCALDB
 
 
 :::{note}
