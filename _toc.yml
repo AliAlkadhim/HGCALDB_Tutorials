@@ -4,7 +4,6 @@ root: tutorials/welcome.md
 chapters:
 - file: tutorials/intro.md
 - file: tutorials/RESThub.md
-#- file: 3_Replacing_Data_with_Lambda_and_2D_Inference.ipynb
-#- file: 4_Mapping_Confidence_Sets_to_Confidence_Intervals.ipynb
-#- file: 5_Imposing_Pivotal_Conditions_on_Lambda.ipynb
-#- file: 6_More_Ideas.ipynb
+- file: tutorials/OMS.md
+- file: tutorials/LCD_HGCAL_analysis_workflows.md
+- file: tutorials/SQL_and_SQLDeveloper.md

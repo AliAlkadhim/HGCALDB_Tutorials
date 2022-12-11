@@ -37,8 +37,8 @@ The easiest way is using conditions tables (not secure: http):
 
 1.3. Find the conditions tables that have `IV`: `python3 rhapi.py --url=http://dbloader-hgcal:8113 "select * from hgc_int2r.conditions c" | grep IV`
 
-<p align="center">
-<img src="RESTHUB_conditions_IV.png" width="1000" height="100" border="10"/>
+<p >
+<img src="RESTHUB_conditions_IV.png" width="1000" height="100" >
 </p>
 
 2. Clearly we want `HGC CERN SENSOR IV`. `RESTHub` allows us to use that table either by its ID (0th column), or `DATABASE_TABLE` (2nd column) (potentially by `CONDITION_TABLE` by I don't know how to yet). Let's use `DATABAE_TABLE`, where for us `DATABASE_TABLE` is `HGC_CERN_SENSOR_IV`.

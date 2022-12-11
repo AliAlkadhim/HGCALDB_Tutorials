@@ -52,6 +52,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="OMS.html" />
     <link rel="prev" title="HGCAL Introduction" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -375,8 +376,8 @@ title="Print to PDF"
 <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">rhapi.py</span> <span class="pre">--url=http://dbloader-hgcal:8113</span> <span class="pre">&quot;select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">hgc_int2r.conditions</span> <span class="pre">c&quot;</span></code></p>
 <p>1.2 Find the header row columns: <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">rhapi.py</span> <span class="pre">--url=http://dbloader-hgcal:8113</span> <span class="pre">&quot;select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">hgc_int2r.conditions</span> <span class="pre">c&quot;</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">-1</span></code></p>
 <p>1.3. Find the conditions tables that have <code class="docutils literal notranslate"><span class="pre">IV</span></code>: <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">rhapi.py</span> <span class="pre">--url=http://dbloader-hgcal:8113</span> <span class="pre">&quot;select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">hgc_int2r.conditions</span> <span class="pre">c&quot;</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">IV</span></code></p>
-<p align="center">
-<img src="RESTHUB_conditions_IV.png" width="1000" height="100" border="10"/>
+<p >
+<img src="RESTHUB_conditions_IV.png" width="1000" height="100" >
 </p>
 <ol class="simple">
 <li><p>Clearly we want <code class="docutils literal notranslate"><span class="pre">HGC</span> <span class="pre">CERN</span> <span class="pre">SENSOR</span> <span class="pre">IV</span></code>. <code class="docutils literal notranslate"><span class="pre">RESTHub</span></code> allows us to use that table either by its ID (0th column), or <code class="docutils literal notranslate"><span class="pre">DATABASE_TABLE</span></code> (2nd column) (potentially by <code class="docutils literal notranslate"><span class="pre">CONDITION_TABLE</span></code> by I don’t know how to yet). Let’s use <code class="docutils literal notranslate"><span class="pre">DATABAE_TABLE</span></code>, where for us <code class="docutils literal notranslate"><span class="pre">DATABASE_TABLE</span></code> is <code class="docutils literal notranslate"><span class="pre">HGC_CERN_SENSOR_IV</span></code>.</p></li>
@@ -424,6 +425,13 @@ title="Print to PDF"
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">HGCAL Introduction</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="OMS.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             </footer>
