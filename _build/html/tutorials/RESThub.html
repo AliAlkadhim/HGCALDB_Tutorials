@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>HGCAL Introduction &#8212; HGCAL DB Tutorials</title>
+    <title>So what is REST API? &#8212; HGCAL DB Tutorials</title>
     
   <!-- Loaded before other Sphinx assets -->
   <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
@@ -52,7 +52,6 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Welcome to HGCALDB Tutorials, a one-stop-shop for all things HGCALDB" href="welcome.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -107,9 +106,9 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
- <li class="toctree-l1 current active">
-  <a class="current reference internal" href="#">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    HGCAL Introduction
   </a>
  </li>
@@ -186,7 +185,7 @@ title="Fullscreen mode"
   <div class="menu-dropdown__content">
     <ul>
       <li>
-        <a href="../_sources/tutorials/intro.md"
+        <a href="../_sources/tutorials/RESThub.md"
    class="headerbtn"
    data-toggle="tooltip"
 data-placement="left"
@@ -247,12 +246,29 @@ title="Print to PDF"
         <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   HGCAL Introduction
+   So what is REST API?
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hgcal">
-   HGCAL
+  <a class="reference internal nav-link" href="#what-is-resthub-https-github-com-valdasraps-resthub">
+   What is RESTHub (https://github.com/valdasraps/resthub/)?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-resthub-for-hgcal-db">
+   How to use RESTHub for HGCAL DB?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#making-sure-you-can-run-the-python-client">
+     Making sure you can run the python client
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suppose-in-the-normal-sqldeveloper-we-use-the-sql-query-below-how-can-we-use-translate-this-to-resthub">
+   Suppose in the normal sqldeveloper we use the sql query below. How can we use translate this to RESTHub?
   </a>
  </li>
 </ul>
@@ -264,7 +280,7 @@ title="Print to PDF"
         <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>HGCAL Introduction</h1>
+                <h1>So what is REST API?</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -276,12 +292,29 @@ title="Print to PDF"
                             <ul class="visible nav section-nav flex-column">
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#">
-   HGCAL Introduction
+   So what is REST API?
   </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#hgcal">
-   HGCAL
+  <a class="reference internal nav-link" href="#what-is-resthub-https-github-com-valdasraps-resthub">
+   What is RESTHub (https://github.com/valdasraps/resthub/)?
+  </a>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#how-to-use-resthub-for-hgcal-db">
+   How to use RESTHub for HGCAL DB?
+  </a>
+  <ul class="visible nav section-nav flex-column">
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#making-sure-you-can-run-the-python-client">
+     Making sure you can run the python client
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h1 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#suppose-in-the-normal-sqldeveloper-we-use-the-sql-query-below-how-can-we-use-translate-this-to-resthub">
+   Suppose in the normal sqldeveloper we use the sql query below. How can we use translate this to RESTHub?
   </a>
  </li>
 </ul>
@@ -294,20 +327,62 @@ title="Print to PDF"
                 
               <div>
                 
-  <p>HGCAL DB is DB …</p>
-<p>These tutorials grew from me working on the DB as a grad student and member of the CMS experiment, and wanting to gather all these things in one place.</p>
-<p>Although there are many tutorials and presentations by Aivaras, Florian, etc. and other twikis, there is yet to be a single place to bring explain all these tools and how to <em>practically</em> use them in one single place.</p>
-<p>Many of the technologies explained in the next chapters were briefly explained in the GEM database paper, but there has been many changes since then, and introductions of new technologies, and a complete overhaul of the central XML database.</p>
-<p>It’s important that we are familiar with the motivations of HGCAL, and the basics of all of its components and how they work and the procedures for testing the components.</p>
-<p>I think such a resource is important if we were
-to make this DB (and CMS databases in general) better, and involve more people and ideas into their development, and to have this information readily available, but separate from the official documentation of each of the covered tools.</p>
-<section class="tex2jax_ignore mathjax_ignore" id="hgcal-introduction">
-<h1>HGCAL Introduction<a class="headerlink" href="#hgcal-introduction" title="Permalink to this headline">#</a></h1>
-<p>One of the best resources to learn about HGCAL in general (based on my limited, silicon-sensor-biased  knowledge) is <a class="reference external" href="https://cds.cern.ch/record/2766455/files/CERN-THESIS-2021-045.pdf">Victoria’s thesis</a></p>
-<p>and <a class="reference external" href="https://inspirehep.net/files/65495e3bb489420d4e59189883319e30">Elias Pree</a>’s thesis.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="so-what-is-rest-api">
+<h1>So what is REST API?<a class="headerlink" href="#so-what-is-rest-api" title="Permalink to this headline">#</a></h1>
+<p>70% of all APIs are REST APIs (basically the infrastructure of any company is based on it). REST is an archetectural syle. REST is based on HTTP (network protocol that is secure &amp; encrypted end-to-end). The people at CERN came up with http, which is stateless (you don’t have to establish a server connection - everything is handeled by the request/response) - each operation=new connection.</p>
+<p>HTTP means</p>
+<ul class="simple">
+<li><p>you send a request to a particular url with message, etc and you</p></li>
+<li><p>get something back from the server based on the request as a response (in JSON format).</p></li>
+<li><p>your browser translates this json data to display information,e.g. a picture in the web.</p></li>
+</ul>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="hgcal">
-<h1>HGCAL<a class="headerlink" href="#hgcal" title="Permalink to this headline">#</a></h1>
+<section class="tex2jax_ignore mathjax_ignore" id="what-is-resthub-https-github-com-valdasraps-resthub">
+<h1>What is RESTHub (<a class="reference external" href="https://github.com/valdasraps/resthub/">https://github.com/valdasraps/resthub/</a>)?<a class="headerlink" href="#what-is-resthub-https-github-com-valdasraps-resthub" title="Permalink to this headline">#</a></h1>
+<p>Previously, in order to connect to an Oracle DB, such as HGCALDB, you had to have an oracle client, a running server managing some connection states, where transactions can go across multiple calls… This is very slow!</p>
+<p>RESTHub allows you to have SQL pattern (query) power the https request, and the response will be the result of the SQL command in JSON format.</p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="how-to-use-resthub-for-hgcal-db">
+<h1>How to use RESTHub for HGCAL DB?<a class="headerlink" href="#how-to-use-resthub-for-hgcal-db" title="Permalink to this headline">#</a></h1>
+<section id="making-sure-you-can-run-the-python-client">
+<h2>Making sure you can run the python client<a class="headerlink" href="#making-sure-you-can-run-the-python-client" title="Permalink to this headline">#</a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">wget</span> <span class="pre">https://raw.githubusercontent.com/valdasraps/resthub/master/clients/python/src/main/python/rhapi.py</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">rhapi.py</span> <span class="pre">--help</span></code></p></li>
+<li><p>Using <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">rhapi.py</span> <span class="pre">--url=http://dbloader-tracker:8113</span></code> locally doesn’t work because theres no connection. But using it in <code class="docutils literal notranslate"><span class="pre">lxplus</span></code> shows <code class="docutils literal notranslate"><span class="pre">['trker_cmsr',</span> <span class="pre">'trker_int2r']</span></code></p></li>
+<li><p>FROM NOW ON, USE THIS ON LXPLUS.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">rhapi.py</span> <span class="pre">--url=http://dbloader-hgcal:8113</span> <span class="pre">hgc_int2r</span></code></p></li>
+<li><p>Now <code class="docutils literal notranslate"><span class="pre">hgc_int2r</span></code> takes the place of</p></li>
+<li><p>Execute query: by adding the query in <code class="docutils literal notranslate"><span class="pre">&quot;</span> <span class="pre">&lt;SQL</span> <span class="pre">QUERY&gt;</span></code> to the commands above.</p></li>
+</ul>
+</section>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="suppose-in-the-normal-sqldeveloper-we-use-the-sql-query-below-how-can-we-use-translate-this-to-resthub">
+<h1>Suppose in the normal sqldeveloper we use the sql query below. How can we use translate this to RESTHub?<a class="headerlink" href="#suppose-in-the-normal-sqldeveloper-we-use-the-sql-query-below-how-can-we-use-translate-this-to-resthub" title="Permalink to this headline">#</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/*</span> <span class="n">see</span> <span class="n">everythong</span> <span class="ow">in</span> <span class="n">the</span> <span class="n">hcg_cern_sensor_ivl</span> <span class="o">*/</span>
+<span class="n">select</span> <span class="o">*</span> <span class="kn">from</span> <span class="nn">CMS_HGC_HGCAL_COND.hgc_cern_sensor_iv</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>The easiest way is using conditions tables (not secure: http):
+(for secure use dbloader through DCA as in <a class="reference external" href="https://github.com/valdasraps/cmsdbldr/blob/1f2e1ed14886c9b16e8ea8fbf9ff52d7cc9a00f6/src/main/python/cmsdbldr_client.txt">https://github.com/valdasraps/cmsdbldr/blob/1f2e1ed14886c9b16e8ea8fbf9ff52d7cc9a00f6/src/main/python/cmsdbldr_client.txt</a>)</p>
+<p>1.1 Find the available conditions
+<code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">rhapi.py</span> <span class="pre">--url=http://dbloader-hgcal:8113</span> <span class="pre">&quot;select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">hgc_int2r.conditions</span> <span class="pre">c&quot;</span></code></p>
+<p>1.2 Find the header row columns: <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">rhapi.py</span> <span class="pre">--url=http://dbloader-hgcal:8113</span> <span class="pre">&quot;select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">hgc_int2r.conditions</span> <span class="pre">c&quot;</span> <span class="pre">|</span> <span class="pre">head</span> <span class="pre">-1</span></code></p>
+<p>1.3. Find the conditions tables that have <code class="docutils literal notranslate"><span class="pre">IV</span></code>: <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">rhapi.py</span> <span class="pre">--url=http://dbloader-hgcal:8113</span> <span class="pre">&quot;select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">hgc_int2r.conditions</span> <span class="pre">c&quot;</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">IV</span></code></p>
+<p align="center">
+<img src="images/RESTHUB_conditions_IV.png" width="1000" height="100" border="10"/>
+</p>
+<ol class="simple">
+<li><p>Clearly we want <code class="docutils literal notranslate"><span class="pre">HGC</span> <span class="pre">CERN</span> <span class="pre">SENSOR</span> <span class="pre">IV</span></code>. <code class="docutils literal notranslate"><span class="pre">RESTHub</span></code> allows us to use that table either by its ID (0th column), or <code class="docutils literal notranslate"><span class="pre">DATABASE_TABLE</span></code> (2nd column) (potentially by <code class="docutils literal notranslate"><span class="pre">CONDITION_TABLE</span></code> by I don’t know how to yet). Let’s use <code class="docutils literal notranslate"><span class="pre">DATABAE_TABLE</span></code>, where for us <code class="docutils literal notranslate"><span class="pre">DATABASE_TABLE</span></code> is <code class="docutils literal notranslate"><span class="pre">HGC_CERN_SENSOR_IV</span></code>.</p></li>
+<li><p>Modify our query to use this table</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>python3 rhapi.py --url=http://dbloader-hgcal:8113 &quot;select * from hgc_int2r.conditions c where c.DATABASE_TABLE =  &#39;HGC_CERN_SENSOR_IV&#39;&quot; 
+```
+
+
+* What if I want to use it locally? Just change the port name to the one you&#39;re using, after to do the ssh command to connect earlier.  
+</pre></div>
+</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -337,13 +412,6 @@ to make this DB (and CMS databases in general) better, and involve more people a
                 
     <!-- Previous / next buttons -->
 <div class='prev-next-area'>
-    <a class='left-prev' id="prev-link" href="welcome.html" title="previous page">
-        <i class="fas fa-angle-left"></i>
-        <div class="prev-next-info">
-            <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Welcome to <em>HGCALDB Tutorials</em>, a one-stop-shop for all things HGCALDB</p>
-        </div>
-    </a>
 </div>
             </footer>
         </div>
