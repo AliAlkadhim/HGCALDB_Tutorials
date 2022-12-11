@@ -39,7 +39,7 @@ parse:
 
 repository:
   url                       : https://https://github.com/AliAlkadhim/HGCALDB_Tutorials  # The URL to your book's repository
-  path_to_book              : "JupyterBook"  # A path to your book's folder, relative to the repository root.
+  path_to_book              : ""  # A path to your book's folder, relative to the repository root.
   branch                    : master  # Which branch of the repository should be used when creating links
 
 latex:
