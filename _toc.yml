@@ -2,8 +2,8 @@
 format: jb-article
 root: tutorials/welcome.md
 sections:
-- file: tutorials/intro.md
-- file: tutorials/RESThub.md
+- file: tutorials/intro
+- file: tutorials/RESThub
 #- file: 3_Replacing_Data_with_Lambda_and_2D_Inference.ipynb
 #- file: 4_Mapping_Confidence_Sets_to_Confidence_Intervals.ipynb
 #- file: 5_Imposing_Pivotal_Conditions_on_Lambda.ipynb
